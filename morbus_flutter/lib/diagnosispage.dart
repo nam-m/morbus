@@ -7,15 +7,20 @@ class DiagnosisPage extends StatefulWidget {
   @override
   _DiagnosisPageState createState() => _DiagnosisPageState();
 }
-enum frequency {A, B, C}
+enum fever_freq {A, B, C}
+enum cough_freq {A, B, C}
+enum breath_freq {A, B, C}
 
 class _DiagnosisPageState extends State<DiagnosisPage> {
-  frequency _character = frequency.A;
+  fever_freq _character1 = fever_freq.A;
+  cough_freq _character2 = cough_freq.A;
+  breath_freq _character3 = breath_freq.A;
 
   TextStyle style = TextStyle(fontFamily: 'Open Sans', fontSize: 20.0);
     @override
     Widget build(BuildContext context) {
       return Scaffold(
+        resizeToAvoidBottomPadding: false,
         appBar: AppBar(
             title: Text('Diagnosis Questions'),
             centerTitle: true,
@@ -33,7 +38,7 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                         fontWeight: FontWeight.normal
                         )
                 ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 0.0),
             ListTile(
               title: Text("1-2 times",
                 textAlign: TextAlign.start,
@@ -41,10 +46,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.A,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: fever_freq.A,
+                groupValue: _character1,
+                onChanged: (fever_freq value) {
+                  setState(() { _character1 = value; });
                 },
               ),
             ),
@@ -55,10 +60,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.B,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: fever_freq.B,
+                groupValue: _character1,
+                onChanged: (fever_freq value) {
+                  setState(() { _character1 = value; });
                 },
               ),
             ),
@@ -69,10 +74,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.C,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: fever_freq.C,
+                groupValue: _character1,
+                onChanged: (fever_freq value) {
+                  setState(() { _character1 = value; });
                 },
               ),
             ),
@@ -84,7 +89,7 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                         fontWeight: FontWeight.normal
                         )
                 ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 0.0),
             ListTile(
               title: Text("1-2 times",
                 textAlign: TextAlign.start,
@@ -92,10 +97,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.A,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: cough_freq.A,
+                groupValue: _character2,
+                onChanged: (cough_freq value) {
+                  setState(() { _character2 = value; });
                 },
               ),
             ),
@@ -106,10 +111,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.B,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: cough_freq.B,
+                groupValue: _character2,
+                onChanged: (cough_freq value) {
+                  setState(() { _character2 = value; });
                 },
               ),
             ),
@@ -120,10 +125,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.C,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: cough_freq.C,
+                groupValue: _character2,
+                onChanged: (cough_freq value) {
+                  setState(() { _character2 = value; });
                 },
               ),
             ),
@@ -135,7 +140,7 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                         fontWeight: FontWeight.normal
                         )
                 ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 0.0),
             ListTile(
               title: Text("1-2 times",
                 textAlign: TextAlign.start,
@@ -143,10 +148,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.A,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: breath_freq.A,
+                groupValue: _character3,
+                onChanged: (breath_freq value) {
+                  setState(() { _character3 = value; });
                 },
               ),
             ),
@@ -157,10 +162,10 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.B,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: breath_freq.B,
+                groupValue: _character3,
+                onChanged: (breath_freq value) {
+                  setState(() { _character3 = value; });
                 },
               ),
             ),
@@ -171,13 +176,16 @@ class _DiagnosisPageState extends State<DiagnosisPage> {
                   color: Colors.black, fontWeight: FontWeight.normal)
                 ),
               leading: Radio(
-                value: frequency.C,
-                groupValue: _character,
-                onChanged: (frequency value) {
-                  setState(() { _character = value; });
+                value: breath_freq.C,
+                groupValue: _character3,
+                onChanged: (breath_freq value) {
+                  setState(() { _character3 = value; });
                 },
               ),
             ),
+            new Expanded(
+              child: SingleChildScrollView(),
+          ),
           ],
         )
       );
