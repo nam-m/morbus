@@ -12,7 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-    TextStyle style = TextStyle(fontFamily: 'Open Sans', fontSize: 25.0);
+    TextStyle style = TextStyle(fontFamily: 'Open Sans', fontSize: 20.0);
 
     @override
     Widget build(BuildContext context) {

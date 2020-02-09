@@ -12,5 +12,7 @@ class _LoggingPageState extends State<LoggingPage> {
   TextStyle style = TextStyle(fontFamily: 'Open Sans', fontSize: 25.0);
 
     @override
-    Widget build(BuildContext context) {}
+    Widget build(BuildContext context) {
+      return Scaffold();
+    }
 }
